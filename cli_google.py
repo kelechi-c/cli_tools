@@ -1,7 +1,8 @@
 from typer import Typer
 from googlesearch import search
 from selenium import webdriver
-# from PyInquirer import prompt, print_json, Separator
+
+from PyInquirer import prompt, print_json, Separator
 from rich import print as rprint
 import subprocess
 
@@ -35,9 +36,12 @@ def cli_google():
     for idx, result in enumerate(top_results, 1):
         rprint(f"[white]{idx}[/white] [blue bold]{result}[/blue bold]")
 
-@google_cli.command('list')
+
+@google_cli.command("list")
 def list_func():
-    subprocess.run(f'ls -l', shell=True)
+    subprocess.run(f"ls -l", shell=True)
+
+    
 
 if __name__ == "__main__":
     google_cli()
