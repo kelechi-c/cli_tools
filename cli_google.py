@@ -2,7 +2,6 @@ from typer import Typer
 from googlesearch import search
 from selenium import webdriver
 
-from PyInquirer import prompt, print_json, Separator
 from rich import print as rprint
 import subprocess
 
